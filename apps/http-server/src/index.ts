@@ -1,15 +1,15 @@
 import express from "express";
+import dotenv from "dotenv";
 
 const app = express();
+dotenv.config();
 
-app.post("/signup",(req,res)=>{
+app.get("/", ({ req, res }: any) => {
+  return res.json({
+    message: `Hello World`,
+  });
+});
 
-})
-app.post("/signin",(req,res)=>{
-
-})
-app.post("/room",(req,res)=>{
-
-})
-
-app.listen(3001);
+app.listen(8000, () => {
+  console.log(`Server Started`);
+});
