@@ -13,10 +13,13 @@
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
-    "@repo/typescript-config": "workspace:*"
+    "@repo/server-common": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
+    "@types/jsonwebtoken": "^9.0.10",
+    "@types/ws": "^8.18.1"
   },
   "dependencies": {
-    "@types/ws": "^8.18.1",
-    "ws": "^8.21.0"
+    "ws": "^8.21.0",
+    "jsonwebtoken": "^9.0.3"
   }
 }
