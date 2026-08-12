@@ -33,6 +33,9 @@ importers:
         specifier: ^19.2.0
         version: 19.2.0(react@19.2.0)
     devDependencies:
+      '@repo/common':
+        specifier: workspace:*
+        version: link:../../packages/common
       '@repo/eslint-config':
         specifier: workspace:*
         version: link:../../packages/eslint-config
@@ -70,6 +73,9 @@ importers:
         specifier: ^7.0.2
         version: 7.0.2
     devDependencies:
+      '@repo/common':
+        specifier: workspace:*
+        version: link:../../packages/common
       '@repo/server-common':
         specifier: workspace:*
         version: link:../../packages/server-common
@@ -85,6 +91,12 @@ importers:
 
   apps/websocket:
     dependencies:
+      jsonwebtoken:
+        specifier: ^9.0.3
+        version: 9.0.3
+      typescript:
+        specifier: ^7.0.2
+        version: 7.0.2
       ws:
         specifier: ^8.21.0
         version: 8.21.0(bufferutil@4.1.0)(utf-8-validate@5.0.10)
@@ -101,11 +113,16 @@ importers:
       '@types/ws':
         specifier: ^8.18.1
         version: 8.18.1
-      jsonwebtoken:
-        specifier: ^9.0.3
-        version: 9.0.3
 
-  packages/common: {}
+  packages/common:
+    dependencies:
+      zod:
+        specifier: ^4.4.3
+        version: 4.4.3
+    devDependencies:
+      '@repo/typescript-config':
+        specifier: workspace:*
+        version: link:../typescript-config
 
   packages/eslint-config:
     devDependencies:
@@ -1922,6 +1939,9 @@ packages:
   yocto-queue@0.1.0:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
+
+  zod@4.4.3:
+    resolution: {integrity: sha512-ytENFjIJFl2UwYglde2jchW2Hwm4GJFLDiSXWdTrJQBIN9Fcyp7n4DhxJEiWNAJMV1/BqWfW/kkg71UDcHJyTQ==}
 
 snapshots:
 
@@ -3857,3 +3877,5 @@ snapshots:
       utf-8-validate: 5.0.10
 
   yocto-queue@0.1.0: {}
+
+  zod@4.4.3: {}
